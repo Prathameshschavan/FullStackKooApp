@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# KooApp Clone #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Deployment Link:-  https://full-stack-koo-app-rfd1-dsplsgp2y-prathameshschavan.vercel.app/ #
 
-## Available Scripts
+KooApp clone is a microblogging platform that enables users to share their thoughts, images, and videos with others. This platform was built with a team of 5 members with the goal of creating a similar experience to the popular microblogging platform Koo.
 
-In the project directory, you can run:
+# *  Key Features:-
+    -User authentication
+    -Ability to post and view posts
+    -Ability to follow/unfollow users
+    -Ability to like/unlike posts
 
-### `npm start`
+# * Technologies Used:-
+    ReactJS/HTML/CSS
+     
+# * Team Members
+    1) Prathameshsh Chavan
+    2) Shubham Tribhuvan
+    3) Sanjay Loncha
+    4) Dinesh Sengar
+    5) Priydarshan Agarwal
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# * Contributing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+We welcome contributions to the KooApp clone. If you are interested in contributing, please fork the repository, make your changes and submit a pull request.
 
-### `npm test`
+# *Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-To get started with the KooApp clone, you will need to follow the steps below:
 
-### `npm run build`
+    1)Clone the repository:-
+    git clone [https://github.com/[username]/kooApp-clone.git](https://github.com/Prathameshschavan/Project_kooApp.git)
+    
+    2)Install the dependencies:-
+     npm install
+     
+    3)Start the server:-
+     npm start
+     
+    4) Visit the site at http://localhost:3004
+    
+**Getting Started With KOOAPP:-
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 1)SIGN IN:-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![6](https://user-images.githubusercontent.com/106821254/218445046-09757202-543f-47c9-a000-5617b7eaaf4a.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 2)CHECK POSTS:-
 
-### `npm run eject`
+![1](https://user-images.githubusercontent.com/106821254/218446278-f3daa0f6-9b0b-4fce-b0bd-1cda7f863416.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# MEMES!!!#
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![2](https://user-images.githubusercontent.com/106821254/218446299-487e80b8-aeeb-4d12-81df-3c4cb88a9fff.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 3)HOW TO POST?CLICK ON POSTS:-
 
-## Learn More
+![7](https://user-images.githubusercontent.com/106821254/218445536-8d652287-532a-4191-ab17-8f8563c8e183.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 4)DO FOLLOW!:-
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![5](https://user-images.githubusercontent.com/106821254/218445723-f93d6da2-aa1d-4e4b-a16d-a6d4024fd106.png)
 
-### Code Splitting
+# 5)CHECK VIDEOS:-
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![3](https://user-images.githubusercontent.com/106821254/218445816-1c89126a-ada5-4d1e-a1b0-fee93315b59d.png)
 
-### Analyzing the Bundle Size
+ # 6)CHECK TRENDING HASHTAGS:-
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![4](https://user-images.githubusercontent.com/106821254/218445903-caf24bba-1c65-457b-857d-2918327671b2.png)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Thank You #
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    

@@ -5,6 +5,7 @@
 .newbtn{
     background-color:rgb(93,118,129) !important; 
     border-radius: 50px;
+    margin-bottom: -10%;
 }
 .COLOR{
     color: white;

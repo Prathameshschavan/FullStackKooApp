@@ -35,7 +35,7 @@ function Navbar() {
      width:"55%",
      position: "sticky",
       top: "12%",
-     padding: "5%",
+     padding: "5% 5% 0% 5%",
      marginLeft:"40%",
      textAlign: "left" ,
     //  border:"2px solid red"

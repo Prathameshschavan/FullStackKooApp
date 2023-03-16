@@ -1,0 +1,49 @@
+.card{
+    width: 95% !important;
+    /* border: 3px solid !important; */
+    margin: 15px;
+    border-radius: 100px;
+
+}
+.NavbarDinesh{
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    
+    display: flex;
+    background-color:#f8f7f3;
+    padding: 3% 4%  2% 4%;
+    font-weight: 700;
+    font-size: larger;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    display: flex;
+    width: 100%;
+}
+.NavbarDinesh>a{
+    color: #888888;
+    text-decoration: none;
+}
+
+#likeComment{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin: auto;
+    font-size: 15px;
+    margin-top: 1%;
+    color: black;
+}
+
+#likeComment>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+
+#likeComment i{
+    font-size: 20px;
+    color: black;
+}
+

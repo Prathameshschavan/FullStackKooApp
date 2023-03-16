@@ -1,0 +1,38 @@
+.btn-primary {
+    background-color: white !important;
+    border: white !important
+}
+.newbtn{
+    background-color:rgb(93,118,129) !important; 
+    border-radius: 50px;
+}
+.COLOR{
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: none;
+    
+    
+}
+
+#navitems button{
+    /* border: 2px solid red; */
+    border-radius: 50px;
+
+}
+
+#navitems{
+    width: 90%;
+    /* border: 2px solid red; */
+}
+#navitems>*{
+    margin: 5% 0;
+}
+
+#method{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+   gap: 35%;
+}
+

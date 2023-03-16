@@ -1,0 +1,12 @@
+.btn-primary{
+color: #888 !important;
+border-style: none;
+font-size: 19px;
+}
+.modal-content{
+    border-radius: 19px !important
+}
+
+.urgent{
+    color: white;
+}

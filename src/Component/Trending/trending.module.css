@@ -1,0 +1,46 @@
+#first {
+    background-color: #eeede9 ;
+    border:1px solid #bcc9c8 ;
+    border-radius: 10px; 
+    width: 80%;
+    margin: 5% 0 0 5%;
+    position: relative;
+    z-index: -999;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 5%;
+    /* border: 2px solid red; */
+    text-align: left;
+    padding-left: 5%;
+}
+
+.card p {
+    font-weight: 400;
+}
+.card i{
+    border: 1px solid #809b9d;
+    color: #809b9d;
+    padding: 3px;
+    padding-left : 4px;
+    border-radius: 20px;
+}
+
+.card>div {
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-top: 1%;
+    margin-left: -8%;
+    /* margin-bottom: 1%; */
+
+    /* border: 2px solid red; */
+    width: 50%;
+}
+.card div img {
+    margin-top: -15%;
+    
+    width:60%;
+}

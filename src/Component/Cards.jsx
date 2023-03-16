@@ -61,7 +61,7 @@ function Cards({ item }) {
       let data = await axios.post("https://clear-jeans-slug.cyclic.app/api/verify", {
         token,
       });
-    console.log(data.data.user._id);
+  
       setAuthId(data.data.user._id);
     } catch (e) {
       console.log(e);

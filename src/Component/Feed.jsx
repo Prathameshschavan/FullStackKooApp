@@ -18,12 +18,10 @@ const Feed = () => {
   };
 
   const data = useSelector((store) => {
-    // console.log(store);
     return store.product;
   });
 
 
-  //  console.log(data);
 
   const dispatch = useDispatch();
   useEffect(() => {

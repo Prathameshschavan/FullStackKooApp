@@ -7,15 +7,16 @@ KooApp clone is a microblogging platform that enables users to share their thoug
 # *  Key Features:-
     -User authentication
     -Ability to post and view posts
-    -Ability to follow/unfollow users
+    -Ability to delete posts
     -Ability to like/unlike posts
+    -Ability to comment on posts
+    -Ability to delete comment posts
 
 # * Technologies Used:-
-    ReactJS/HTML/CSS
+    ReactJS/Bootstrap/ExpressJS/Mongoose/MongoDB
      
 # * Team Members
     1) Prathameshsh Chavan
-    2) Shubham Tribhuvan
     
 # * Contributing
 

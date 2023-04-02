@@ -21,7 +21,7 @@ const Feed = () => {
     return store.product;
   });
 
-
+  let postsArray=[...data]
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -35,14 +35,14 @@ const Feed = () => {
   };
 
   let inputStyles = {
-    width: "94%",
+    width: "95%",
     borderRadius: "10px",
-    padding: "1% 1% 1% 7%",
+    padding: "1% 1% 1% 2%",
     outline: "none",
     border: "none",
     cursor: "pointer",
     boxShadow: "rgba(0, 0, 0, 0.10) 0px 0px 0px 1px",
-    margin: "2% 0 2% -89% ",
+    margin: "2%",
   };
 
   const [removeIcon, setRemoveIcon] = useState(
@@ -63,7 +63,6 @@ const Feed = () => {
           border: "2px solid #f8f7f3",
           backgroundColor: "#f8f7f3",
           width: "100%",
-          margin: "0 0 0 0%",
         }}
       >
         <input
@@ -76,27 +75,11 @@ const Feed = () => {
           placeholder="What's on your mind?"
         />
 
-        {removeIcon && (
-          <i
-            style={{
-              position: "absolute",
-              cursor: "pointer",
-              margin: "1.4% 20% 20% -2%",
-            }}
-            class="fa-solid fa-circle-plus"
-          ></i>
-        )}
-
-        <i
-          style={{ position: "", marginLeft: "-92%", fontSize: "20px" }}
-          id="style.fa-solid"
-          class="fa-solid fa-user fa-lg"
-        ></i>
 
        
           <div style={{}}>
 
-            {data.length>0?data.reverse().map((ele, i) => {
+            {postsArray.length>0?postsArray.reverse().map((ele, i) => {
               return <Cards key={i + 1} item={ele} />;
             }):
             <div>

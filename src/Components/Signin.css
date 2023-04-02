@@ -1,7 +1,6 @@
 
 
 .btn-primary:hover{
-    font-size: 19px !important;
     color: white !important;
     background-color: #5D7681 !important;
 }
@@ -17,17 +16,12 @@
     text-align: center !important; 
 }
 
-.modal-content{
-    width: 200% !important;
-    padding: 1%;
-    margin: 0 0 0 -85%;
-}
 .fade modal show,.modal-dialog modal-lg modal-dialog-centered{
     display: block !important;
-    padding-left: 20% !important;
+    /* padding-left: 20% !important; */
 }
 .modal.show .modal-dialog {
-    padding-left: 13.5% !important;
+    /* padding-left: 13.5% !important; */
     transform: none;
 }
 
@@ -53,9 +47,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 10px;
-    margin: 0 3% 0 0;
-    padding: 0 0 0 15%;
+    text-align: center;
+    width: 85%;
+    margin:  auto;
 }
 
 .footerDiv>label{
@@ -72,11 +66,10 @@
 
 .signBtn{
     background-color: #fff;
-    color: #5D7681;
-    border: 2px solid #5D7681;
+    color: #5D7681 !important;
+    border: 2px solid #5D7681 !important;
     font-weight: 500;
     border-radius: 30px;
-    margin-left: -35%;
 }
 
 .signBtn:hover{

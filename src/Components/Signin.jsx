@@ -2,7 +2,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import React,{ useState,useEffect } from "react";
-import myContext from "./myContext";
 import "./Signin.css"
 import UserProfile from './UserProfile';
 import axios from "axios"
@@ -31,7 +30,7 @@ function Signin (props) {
     event.preventDefault();
     try {
       let data = await axios.post("https://clear-jeans-slug.cyclic.app/api/register",{name, email, gender, password});
-      toast.success("User Resgistered Successfully!")
+      toast.success("User Registered Successfully!")
       setShow(false);
     } catch (error) {
       toast.error("User Already Exist!")
@@ -43,8 +42,8 @@ function Signin (props) {
 
   return (
     <>
-    <ToastContainer />
-      <Modal show={show} onHide={handleClose}>
+    {/* <ToastContainer /> */}
+      <Modal show={show} onHide={handleClose} dialogClassName="modal-50w">
         <Modal.Header closeButton>
             <Modal.Title>
                {loginDiv ? "Fill In The Details" :"Choose SignIn Method"}
@@ -103,11 +102,11 @@ function Signin (props) {
           <br />
           <Button style={{display:"flex", border:"2px solid red", color:"red", gap:"20%", alignItems:"center"}}>
           <img style={{width:"5%", marginLeft:"10%"}} src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="" />
-            Sign-up with Google </Button>
+              Google Sign-up in progress... </Button>
           <br />
           <Button style={{display:"flex", border:"2px solid red", color:"red", gap:"20%", alignItems:"center"}}>
           <img style={{width:"5%", marginLeft:"10%"}} src="https://cdn-icons-png.flaticon.com/512/2504/2504911.png" alt="" />
-            Sign-up with Github</Button>
+              Github Sign-up in progress...</Button>
           <br />
           </>
           }
@@ -121,11 +120,11 @@ function Signin (props) {
           <img src="https://cdn-icons-png.flaticon.com/512/3670/3670133.png" style={{width:"4%"}} alt="" />
           </label>
         </div>  
-         <p  style={{ margin:"auto"}}>By continuing, I accept Terms of Service, Privacy Policy and Community Guidelines.</p> 
+         <p  style={{ textAlign:"center"}}>By continuing, I accept Terms of Service, Privacy Policy and Community Guidelines.</p> 
         </Modal.Footer>
       </Modal>
 
-     <Button className='signBtn' variant='outline' onClick={handleShow}>SignIn</Button>
+     <Button className="signBtn"  onClick={handleShow}>SignUp</Button>
     </>
   );
 }

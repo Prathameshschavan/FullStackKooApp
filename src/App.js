@@ -1,5 +1,5 @@
 import './App.css';
-import RoutesComp from './Components/RoutesComp';
+
 import Navbar from './Components/Navbar';
 import Feed from './Component/Feed';
 import Nav from "./Component/Nav"
@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import {ChakraProvider} from "@chakra-ui/react"
 import Trending from './Component/Trending/Trending';
+import MobileNav from "./Component/MobileNav";
 
 function App() {
   const data =useSelector((store)=>{
@@ -32,6 +33,15 @@ function App() {
  window.matchMedia("(min-width: 768px)").removeListener(handler);
  };
  }, []);
+
+ const [nav, setNav] = useState(window.matchMedia("(max-width: 767px)").matches);
+ useEffect(() => {
+ const handler = e => setNav(e.matches);
+ window.matchMedia("(max-width: 767px)").addListener(handler);
+ return () => {
+ window.matchMedia("(max-width: 767px)").removeListener(handler);
+ };
+ }, []);
  
 
 
@@ -45,12 +55,12 @@ function App() {
       {data ?  <div><ChakraProvider> <PostWriter /> </ChakraProvider></div> : <div className='Koo'>
                                                 
                                                 {loginMatch &&  <div style={{ width: "100%" }}>
-                                                      <RoutesComp/>
                                                       <Navbar/>
                                                   </div>} 
                                                  
                                                   <div style={{width:"140%",margin: "0 0 0 0%" }} > 
-                                                      <Nav/>
+                                                    {/* {loginMatch && <Nav/>}   */}
+                                                     {nav ? <MobileNav />:<Nav />} 
                                                       <RouterDinesh/>
                                                       
                                                   </div>

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
     return(
         <div className="NavbarDinesh" style={{fontSize:"15px"}}>
            <Link to="/Feed">Feed</Link>
-           <Link to="/people">People</Link>
+           <Link to="/Feed">People</Link>
            <Link to="/new">New</Link>
            <Link to="/polls">Polls</Link>
            <Link to="/videos">Videos</Link>

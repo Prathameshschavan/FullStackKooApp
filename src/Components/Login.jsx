@@ -24,19 +24,17 @@ const Login = ({press}) => {
      try {
         let data = await axios.post("https://clear-jeans-slug.cyclic.app/api/login",{email,password});
         localStorage.setItem("userToken", data.data.user.token)
-        toast.success("User Login SuccessFull !")
+        toast.success("User Login Successfully!")
         window.location.reload();
-        // navigate("/")
      } catch (error) {
-        // console.log(error);
         toast.error("UserName Or Password Is Wrong!")
      }
   }
 
   return (
       <div>
-        <ToastContainer style={{zIndex:"9999"}}/>
-        <Modal show={show} onHide={handleClose}>
+        {/* <ToastContainer style={{zIndex:"9999"}}/> */}
+        <Modal show={show} onHide={handleClose} dialogClassName="modal-50w">
           <Modal.Header closeButton>
             <Modal.Title>Fill Login Details</Modal.Title>
           </Modal.Header>
@@ -61,18 +59,19 @@ const Login = ({press}) => {
             </Button>
           </Form>
           </Modal.Body>
-          <Modal.Footer >
-            <div style={{ margin:"auto",padding:"0 0 0 15%"}} className='footerDiv'>
-            <input type="checkbox" />
-            <label>I agree to receive important updates via Whatsapp
-              <img src="https://cdn-icons-png.flaticon.com/512/3670/3670133.png" style={{width:"4%"}} alt="" />
-            </label>
-            </div>  
-            <p style={{ margin:"auto"}}>By continuing, I accept Terms of Service, Privacy Policy and Community Guidelines.</p> 
-          </Modal.Footer>
+          <Modal.Footer>
+        <div className='footerDiv'>
+        <input type="checkbox" />
+        <label>
+          I agree to receive important updates via Whatsapp
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670133.png" style={{width:"4%"}} alt="" />
+          </label>
+        </div>  
+         <p  style={{ textAlign:"center"}}>By continuing, I accept Terms of Service, Privacy Policy and Community Guidelines.</p> 
+        </Modal.Footer>
           
         </Modal>
-        <Button className="signBtn" variant="" onClick={handleShow}>Login</Button>
+        <Button className="signBtn"  onClick={handleShow}>Login</Button>
       </div>
   )
 };

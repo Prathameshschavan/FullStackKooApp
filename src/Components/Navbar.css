@@ -1,10 +1,10 @@
 .btn-primary {
     background-color: white !important;
-    border: white !important
+    border: white !important;
 }
 .newbtn{
     background-color:rgb(93,118,129) !important; 
-    border-radius: 50px;
+    border-radius: 50px !important;
     margin-bottom: -10%;
 }
 .COLOR{
@@ -34,6 +34,5 @@
     display: flex;
     justify-content: space-between;
     /* border: 2px solid red; */
-   gap: 35%;
 }
 

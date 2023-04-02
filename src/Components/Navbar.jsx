@@ -27,7 +27,9 @@ function Navbar() {
   };
   var style3={
     backgroundColor: "white !important",
-    
+    display:"flex",
+    alignItems: "center",
+    gap:"5px"
   }
  var style2={
      fontSize: "18px",
@@ -68,11 +70,11 @@ function Navbar() {
        <Link to="/"><img src="https://www.kooapp.com/_next/static/media/logoKuSolidOutline.1f4fa971.svg" style={imagestyle} alt="" /></Link>
        <br /> 
        <div id="navitems">
-          <Button variant="primary" style={style3}><Link style={aStyle} to="/"><AiOutlineHome/> Feed</Link></Button>{' '}
+          <Button  style={style3}><AiOutlineHome/> Feed</Button>{' '}
           {value ?<UserProfile value={value.data}/> :<></>}
-          <Button variant="primary" style={style3}><Link style={aStyle} to="/Explore"><AiOutlineBorderlessTable/> Explore</Link> </Button>{' '}
+          <Button  style={style3}><AiOutlineBorderlessTable/> Explore</Button>{' '}
           <Language/>
-          <Button variant="primary" style={style3}> <Link style={aStyle} to="/Search"><AiOutlineSearch/>  Search </Link></Button>{' '}
+          <Button style={style3}><AiOutlineSearch/>  Search </Button>{' '}
        </div>
        
       <Button className="newbtn"> <Link className="COLOR" to="/Koo">+ Koo</Link></Button>

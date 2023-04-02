@@ -55,14 +55,14 @@ const PostWriter = () => {
   async function addDataJson() {
     try {
       let dataUser = await getLoggedInUser();
-      console.log(dataUser);
+      // console.log(dataUser);
       let data = await axios.post("https://clear-jeans-slug.cyclic.app/api/posts", {
         UserId: dataUser._id,
         name: dataUser.name,
         description: content.description,
         image: imageUrl,
-        likes: 0,
-        comments: "0",
+        likes: [],
+        comments: [],
       });
       console.log(data);
       closeWriter();
@@ -102,7 +102,7 @@ const PostWriter = () => {
       });
       console.log(res);
       setContent({ ...content, description: res.data });
-      console.log(content);
+      // console.log(content);
       document.getElementById("feedbox").value = res.data;
     } catch (error) {
       console.log(error);
@@ -152,47 +152,47 @@ const PostWriter = () => {
   }
 
   return (
-    <Box px="20%" py="4.3%" bg="#E8E8E3">
-      <Modal isOpen={isOpen} onClose={onClose}>
+    <Box px="2%" py="5%" h={"100vh"} bg="#E8E8E3">
+      <Modal isOpen={isOpen} size={"xs"} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Select Languages</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Stack spacing={1}>
-              <Checkbox defaultChecked id="English" value={"English"}>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"300%"}}><h3>English</h3>    <h3>English</h3></div>
+              <Checkbox defaultChecked id="English"  value={"English"}>
+                <div style={{display:"flex", justifyContent:"space-between", gap:"50%", alignItems:"center", width:"100%"}}><h3>English</h3>    <h3>English</h3></div>
               </Checkbox>
               <br />
               <Checkbox id="हिन्दी" value={"हिन्दी"}>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"411%"}}><h3>हिन्दी</h3>   <h3>Hindi</h3></div>
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", gap:"50%", width:"100%"}}><h3>हिन्दी</h3>   <h3>Hindi</h3></div>
               </Checkbox>
               <br />
               <Checkbox id="ಕನ್ನಡ" value={"ಕನ್ನಡ"}>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"290%"}}><h3>ಕನ್ನಡ</h3> <h3>Kannada</h3></div>
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", gap:"50%", width:"100%"}}><h3>ಕನ್ನಡ</h3> <h3>Kannada</h3></div>
               </Checkbox>
               <br />
               <Checkbox id="தமிழ்" value={"தமிழ்"}>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"340%"}}><h3>தமிழ்</h3> <h3>Tamil</h3></div>
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", gap:"50%", width:"100%"}}><h3>தமிழ்</h3> <h3>Tamil</h3></div>
               </Checkbox>
               <br />
               <Checkbox id="తెలుగు" value={"తెలుగు"}>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"305%"}}><h3>తెలుగు</h3><h3>Telegu</h3> </div>
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", gap:"50%", width:"100%"}}><h3>తెలుగు</h3><h3>Telegu</h3> </div>
               </Checkbox>
               <br />
               <Checkbox id="मराठी" value={"मराठी"}>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"330%"}}><h3>मराठी</h3> <h3>Marathi</h3></div>
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", gap:"50%", width:"100%"}}><h3>मराठी</h3> <h3>Marathi</h3></div>
               </Checkbox>
               <br />
               <Checkbox id="বাংলা" value={"বাংলা"}>
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"340%"}}><h3>বাংলা</h3> <h3>Bengali</h3></div>
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", gap:"50%", width:"100%"}}><h3>বাংলা</h3> <h3>Bengali</h3></div>
               </Checkbox>
               <br />
             </Stack>
           </ModalBody>
 
           <ModalFooter>
-            <Button px={200} colorScheme="blue" mr={1} onClick={langCheck}>
+            <Button px={150} colorScheme="blue" mr={1} onClick={langCheck}>
               Done
             </Button>
           </ModalFooter>
@@ -283,7 +283,7 @@ const PostWriter = () => {
             {imageUrl ? (
               <Popover>
                 <PopoverTrigger>
-                  <buton
+                  <button
                     style={{
                       fontSize: "1%",
                       padding: "2%",
@@ -294,7 +294,7 @@ const PostWriter = () => {
                     }}
                   >
                     Preview
-                  </buton>
+                  </button>
                 </PopoverTrigger>
                 <PopoverContent boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}>
                   <PopoverArrow />

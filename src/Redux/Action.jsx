@@ -1,9 +1,8 @@
 
 const action =(dispatch)=>{
-    fetch("https://clear-jeans-slug.cyclic.app/api/posts")
+    fetch("http://localhost:8080/api/posts")
     .then((res)=>res.json())
     .then((data)=>{
-        // console.log(data)
         dispatch({
             type:"Get",
             payload:data.posts

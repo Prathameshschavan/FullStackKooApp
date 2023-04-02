@@ -10,7 +10,7 @@ export default function Trending() {
 
 
     <div style={{position:"static"}} >
-    <input style={{width:"80%", borderRadius:"20px", padding:"1.5% 10%", margin:"5% 0 0 -12%", zIndex:"-9999"}} placeholder="Search" type="search"  />
+    <input style={{width:"80%", borderRadius:"20px", padding:"1.5% 10%", margin:"5% 0 0 -12%", zIndex:"-9999", outline:"none", border:"1px solid black"}} readOnly  placeholder="Search" type="search"  />
     </div>
     <i style={{margin:"-6.5% 0% 0 -42% ", position:"absolute"}} class="fa-solid fa-magnifying-glass"></i>
     <i style={{margin:"-6.5% 0% 0 25% ", position:"absolute"}} class="fa-solid fa-microphone"></i>

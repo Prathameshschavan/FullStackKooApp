@@ -285,7 +285,7 @@ const PostWriter = () => {
                 <PopoverTrigger>
                   <button
                     style={{
-                      fontSize: "1%",
+                      fontSize: "15px",
                       padding: "2%",
                       border: "2px solid black",
                       borderRadius: "5px",

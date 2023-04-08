@@ -65,7 +65,7 @@ function App() {
                                                       
                                                   </div>
 
-                                                  {matches && <div style={{width:"100%", position:"static"}} > 
+                                                  {matches && <div style={{width:"100%"}} > 
                                                   <Trending /> 
                                                   </div>}
                                                   

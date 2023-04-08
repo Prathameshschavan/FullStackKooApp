@@ -5,7 +5,7 @@ import pic from "../Trending/trendImg.png"
 
 export default function Trending() {
   return (
-  <div style={{position:"sticky", top:"10%"}}  >
+  <div style={{position:"sticky", top:"2%"}}  >
 
 
 

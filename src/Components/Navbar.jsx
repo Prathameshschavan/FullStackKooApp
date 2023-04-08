@@ -36,7 +36,7 @@ function Navbar() {
      display:"grid",
      width:"55%",
      position: "sticky",
-      top: "12%",
+      top: "8%",
      padding: "5% 5% 0% 5%",
      marginLeft:"40%",
      textAlign: "left" ,

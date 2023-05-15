@@ -4,6 +4,7 @@ import Video from "../Components/Video";
 import Feed from "./Feed";
 import People from "./People";
 import PostWriter from "./PostWriter";
+import Cricket from "../Components/Cricket";
 
 
 
@@ -15,7 +16,7 @@ function RouterDinesh(props) {
       <Route path="/new" element={<Feed/>} />
       <Route path="/polls" element={<Feed/>}/>
       <Route path="/videos" element={<Video/>}/>
-      <Route path="/cricket" element={<Feed/>}/>
+      <Route path="/cricket" element={<Cricket />}/>
       <Route path="/following" element={<Feed/>}/>
       <Route path="/popular" element={<Feed/>}/>
       <Route path="/Project_kooApp" element={<Feed/>} />

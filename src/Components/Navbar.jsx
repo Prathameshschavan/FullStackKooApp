@@ -1,88 +1,125 @@
-import "./Navbar.css"
-import { Link } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
-import Language from "./Language";
-import Signin from "./Signin";
-import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineBorderlessTable } from "react-icons/ai";
-import { AiOutlineSearch } from "react-icons/ai";
-import UserProfile from "./UserProfile";
-import Login from "./Login";
-import { useEffect, useState } from "react";
-import axios from "axios";
-
+import { Col, Dropdown, Nav, Row } from "react-bootstrap";
+import "./Navbar.css";
+import { useState } from "react";
+import { Assets } from "../Component/Assets";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
-  const [value, setValue] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem("userToken"));
-  const [trigger, press] = useState(0);
-  
-  var aStyle = {
-    color: "#888",
-    // margin: "9%",
-    fontSize:" 19px",
-    textDecoration: "none",
-   
-     
-  };
-  var style3={
-    backgroundColor: "white !important",
-    display:"flex",
-    alignItems: "center",
-    gap:"5px"
-  }
- var style2={
-     fontSize: "18px",
-     display:"grid",
-     width:"55%",
-     position: "sticky",
-      top: "8%",
-     padding: "5% 5% 0% 5%",
-     marginLeft:"40%",
-     textAlign: "left" ,
-    //  border:"2px solid red"
- }
- var imagestyle={
-  width: "30%",
-  margin: "auto 3rem",
-  // border:"2px solid red"
- }
- 
- 
-
- async function getLoggedInUser(){
-   try{let data = await axios.post("https://clear-jeans-slug.cyclic.app/api/verify",{token});
-  //  console.log(data);
-   setValue(data);}
-   catch(e){
-    console.log(e);
-   }
- }
-
- useEffect(()=>{
-  getLoggedInUser();
-  
-},[])
- 
-// console.log(value);
+  const [selectedMenu, setSelectedMenu] = useState("/");
+  const navigate = useNavigate();
   return (
-    <div style={style2}>
-       <Link to="/"><img src="https://www.kooapp.com/_next/static/media/logoKuSolidOutline.1f4fa971.svg" style={imagestyle} alt="" /></Link>
-       <br /> 
-       <div id="navitems">
-          <Button  style={style3}><AiOutlineHome/> Feed</Button>{' '}
-          {value ?<UserProfile value={value.data}/> :<></>}
-          <Button  style={style3}><AiOutlineBorderlessTable/> Explore</Button>{' '}
-          <Language/>
-          <Button style={style3}><AiOutlineSearch/>  Search </Button>{' '}
-       </div>
-       
-      <Button className="newbtn"> <Link className="COLOR" to="/Koo">+ Koo</Link></Button>
-      <br /> <br />  
-      {
-      token ?   <></>:
-      <div id="method"><Signin/> <Login press={press} /></div>
-      }
+    <div className="navbar-containter">
+      <Row style={{ width: "100%" }}>
+        <Col xs={4}>
+          <div style={{ display: "flex", alignItems: "center", height:"100%" }}>
+            <h3 className="social_media_text">Aura</h3>
+          </div>
+        </Col>
+        <Col
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          xs={4}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <Nav
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "100%",
+              }}
+              variant="underline"
+              defaultActiveKey="/"
+            >
+              <Nav.Item
+                className={`navbar-item-container${
+                  selectedMenu === "/" ? "-selected" : ""
+                }`}
+                onClick={() => {
+                  navigate("/");
+                  setSelectedMenu("/");
+                }}
+              >
+                <i className="fa-solid fa-house"></i>
+              </Nav.Item>
+              <Nav.Item
+                className={`navbar-item-container${
+                  selectedMenu === "/videos" ? "-selected" : ""
+                }`}
+                onClick={() => {
+                  navigate("/videos");
+                  setSelectedMenu("/videos");
+                }}
+              >
+                <i className="fa-brands fa-youtube"></i>
+              </Nav.Item>
+              <Nav.Item
+                className={`navbar-item-container${
+                  selectedMenu === "/groups" ? "-selected" : ""
+                }`}
+                onClick={() => {
+                  navigate("/groups");
+                  setSelectedMenu("/groups");
+                }}
+              >
+                <i className="fa-solid fa-users"></i>
+              </Nav.Item>
+              <Nav.Item
+                className={`navbar-item-container${
+                  selectedMenu === "/friends" ? "-selected" : ""
+                }`}
+                onClick={() => {
+                  navigate("/friends");
+                  setSelectedMenu("/friends");
+                }}
+              >
+                <i className="fa-solid fa-user-group"></i>
+              </Nav.Item>
+            </Nav>
+          </div>
+        </Col>
+        <Col
+          style={{
+            display: "flex",
+          }}
+          xs={4}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              alignItems: "center",
+              width: "100%",
+            }}
+          >
+            <Dropdown className="navbar-dropdown">
+              <Dropdown.Toggle className="navbar-dropdown">
+                <img
+                  style={{ width: "30px" }}
+                  src={Assets.USER_PROFILE}
+                  alt="User Profile"
+                />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item onClick={() => navigate("/login")}>
+                  Log Out
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 }

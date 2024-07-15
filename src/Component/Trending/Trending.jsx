@@ -1,4 +1,4 @@
-import { border } from "@chakra-ui/react";
+// import { border } from "@chakra-ui/react";
 import React from "react";
 import style from "../Trending/trending.module.css";
 import pic from "../Trending/trendImg.png"

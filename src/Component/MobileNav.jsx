@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Signin from '../Components/Signin';
-import Login from '../Components/Login';
+// import Login from '../Components/Login';
 import {Link} from "react-router-dom"
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
@@ -52,7 +52,7 @@ useEffect(()=>{
 
   return (
     <>
-    <Navbar variant="light" bg="light" expand="lg">
+    {/* <Navbar variant="light" bg="light" expand="lg">
       <Container fluid>
         <Navbar.Brand style={{display:"flex", width:"50%", gap:"5%"}}> <img style={{width:"10%"}} src="https://www.kooapp.com/_next/static/media/logoKuSolidOutline.1f4fa971.svg" alt="" /> KooApp</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-light-example" />
@@ -87,7 +87,7 @@ useEffect(()=>{
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar> 
+    </Navbar>  */}
     </>
   )
 }

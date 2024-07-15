@@ -3,12 +3,13 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import action from "../Redux/Action";
 import store from "../Redux/Store";
-import Cards from "./Cards";
+import Cards from "./Post";
 import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { myAction } from "../Redux/Action";
 import Spinner from "react-bootstrap/Spinner";
-import Placeholder from 'react-bootstrap/Placeholder';
+import Placeholder from "react-bootstrap/Placeholder";
+import Post from "./Post";
 
 const Feed = () => {
   const [showAnotherComponent, setShowAnotherComponent] = useState(false);
@@ -21,7 +22,7 @@ const Feed = () => {
     return store.product;
   });
 
-  let postsArray=[...data]
+  let postsArray = [...data];
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -32,17 +33,6 @@ const Feed = () => {
 
   const openWriter = () => {
     loginStatus ? myAction(dispatch, true) : alert("Login first to post");
-  };
-
-  let inputStyles = {
-    width: "95%",
-    borderRadius: "10px",
-    padding: "1% 1% 1% 2%",
-    outline: "none",
-    border: "none",
-    cursor: "pointer",
-    boxShadow: "rgba(0, 0, 0, 0.10) 0px 0px 0px 1px",
-    margin: "2%",
   };
 
   const [removeIcon, setRemoveIcon] = useState(
@@ -57,47 +47,78 @@ const Feed = () => {
   }, []);
 
   return (
-    <>
-      <div
-        style={{
-          border: "2px solid #f8f7f3",
-          backgroundColor: "#f8f7f3",
-          width: "100%",
-        }}
-      >
+    <div
+      style={{
+        border: "2px solid #f8f7f3",
+        backgroundColor: "#f8f7f3",
+        width: "100%",
+      }}
+    >
+      <div style={{margin:"10px"}}>
         <input
           onClick={() => {
             openWriter();
           }}
           readOnly
-          style={inputStyles}
+          style={{
+            width: "100%",
+            borderRadius: "10px",
+            outline: "none",
+            border: "none",
+            padding:"8px",
+            cursor: "pointer",
+            boxShadow: "rgba(0, 0, 0, 0.10) 0px 0px 0px 1px",
+          }}
           type="text"
           placeholder="What's on your mind?"
         />
-
-
-       
-          <div style={{}}>
-
-            {postsArray.length>0?postsArray.reverse().map((ele, i) => {
-              return <Cards key={i + 1} item={ele} />;
-            }):
-            <div>
-            {/* <Spinner style={{margin:"50% 0 0 0"}} size="lg" animation="grow" variant="secondary" /> */}
-                <Placeholder  as={"div"} xs={6} animation="glow">
-                        <Placeholder style={{height:"500px", width:"190%", margin:"5% 0 0 5%"}}  xs={12}/>
-                        <Placeholder style={{height:"500px", width:"190%", margin:"5% 0 0 5%"}}  xs={12}/>
-                        <Placeholder style={{height:"500px", width:"190%", margin:"5% 0 0 5%"}}  xs={12}/>
-                        <Placeholder style={{height:"500px", width:"190%", margin:"5% 0 0 5%"}}  xs={12}/> 
-                </Placeholder>
-             
-            </div>
-            
-        }
-          </div>
-        
       </div>
-    </>
+
+      <div style={{}}>
+        {true ? (
+          ["", "", ""].reverse().map((ele, i) => {
+            return <Post key={i + 1} item={ele} />;
+          })
+        ) : (
+          <div>
+            <Placeholder as={"div"} xs={6} animation="glow">
+              <Placeholder
+                style={{
+                  height: "500px",
+                  width: "190%",
+                  margin: "5% 0 0 5%",
+                }}
+                xs={12}
+              />
+              <Placeholder
+                style={{
+                  height: "500px",
+                  width: "190%",
+                  margin: "5% 0 0 5%",
+                }}
+                xs={12}
+              />
+              <Placeholder
+                style={{
+                  height: "500px",
+                  width: "190%",
+                  margin: "5% 0 0 5%",
+                }}
+                xs={12}
+              />
+              <Placeholder
+                style={{
+                  height: "500px",
+                  width: "190%",
+                  margin: "5% 0 0 5%",
+                }}
+                xs={12}
+              />
+            </Placeholder>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 export default Feed;

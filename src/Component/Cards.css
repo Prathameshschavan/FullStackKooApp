@@ -1,6 +1,4 @@
 .card{
-    /* width: 95% !important; */
-    /* border: 3px solid !important; */
     margin: 15px;
     border-radius: 15px;
 
@@ -16,7 +14,6 @@
     font-weight: 700;
     font-size: larger;
     justify-content: space-between;
-    /* border: 2px solid red; */
     display: flex;
     width: 100%;
 }
@@ -28,11 +25,11 @@
 #likeComment{
     display: flex;
     justify-content: space-between;
-    width: 98%;
-    margin: auto;
+    width: 100%;
     font-size: 15px;
-    margin-top: 1%;
+    padding: 10px 20px;
     color: black;
+    border-top: 1px solid #ccc;
 }
 
 #likeComment>div{

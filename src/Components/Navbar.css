@@ -1,38 +1,55 @@
-.btn-primary {
-    background-color: white !important;
-    border: white !important;
-}
-.newbtn{
-    background-color:rgb(93,118,129) !important; 
-    border-radius: 50px !important;
-    margin-bottom: -10%;
-}
-.COLOR{
-    color: white;
-    font-weight: bold;
-    font-size: larger;
-    text-decoration: none;
-    
-    
-}
 
-#navitems button{
-    /* border: 2px solid red; */
-    border-radius: 50px;
-
+*{
+    margin: 0;
+    padding: 0;
 }
-
-#navitems{
-    width: 90%;
-    /* border: 2px solid red; */
-}
-#navitems>*{
-    margin: 5% 0;
-}
-
-#method{
+.navbar-containter{
+    background: linear-gradient(30deg, rgba(2,0,36,1) 0%, rgba(40,0,77,1) 35%, rgba(187,38,77,1) 100%);
+    padding: 10px;
+    position: absolute;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    /* border: 2px solid red; */
+    justify-content: center;
+    z-index: 100;
 }
 
+.navbar-item-container{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    padding: 10px;
+    width: 10%;
+    border-radius: 10px;
+}
+
+.navbar-item-container:hover{
+    background-color: rgba(240, 248, 255, 0.3);
+}
+.navbar-item-container-selected{
+    background-color: rgba(240, 248, 255, 0.3);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    padding: 10px;
+    width: 10%;
+    border-radius: 10px;
+}
+
+.navbar-dropdown{
+    background: none !important;
+    border: none;
+}
+
+.navbar-dropdown:focus{
+    background: none !important;
+    border: none;
+    box-shadow: none;
+}

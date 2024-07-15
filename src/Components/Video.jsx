@@ -1,4 +1,4 @@
-import { background } from "@chakra-ui/react";
+// import { background } from "@chakra-ui/react";
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { BsFillCheckCircleFill } from "react-icons/bs";

@@ -1,4 +1,4 @@
-
+/* 
     .mainbody{
     
         background-color:#F8F7F3;
@@ -7,8 +7,7 @@
 
 
         .mainbox{
-            /* display: grid;
-            grid-template-columns: repeat(3,1fr); */
+
             width: 100%;
             margin: auto;
             padding: 4.5px 0px 4.5px 0px;
@@ -20,29 +19,26 @@
             width: 100%;
             margin: auto;
 
-            /* border: 2px solid red; */
         }
         .main{
             width: 100%;
             margin: auto;
             
             background-color: white;
-            /* border: 2px solid red; */
+
 
             border-radius: 20px;
         }
         .main2{
-            /* border: 1px solid blue; */
+
             display: flex;
             align-items: center;
             padding: 0 50px 0 0;
-            /* grid-template-columns: repeat(3,1fr); */
-            /* border-bottom: 1px solid #e2e8f0; */
+ 
         
         }
         .main2 > .imageanddetails{
             display: flex;
-            /* border: 1px solid green; */
             width: 446px;
             height: 48px;
             padding-top: 9px;
@@ -51,17 +47,14 @@
             padding: 4.5px;
         }
         .main2 > .imageanddetails > .image> img{
-            /* border: 1px solid purple; */
             width: 50px;
             height: 50px;
             border-radius: 50%;
             margin: -5px 0 0 10px;
-            /* border: 2px solid purple;  */
         }
        .nameicon{
             display: flex;
             width: 100%;
-            /* border: 2px solid purple;  */
             margin-top: -10px;
         }
 
@@ -99,13 +92,11 @@
             margin-bottom: -50px;
             width: 100%;
             margin: -8px 0 0 5px ;
-            /* border: 2px solid blue; */
 
         }
         .follow{
             width: 87px;
             height: 57px;
-            /* padding: 15px 13px 0px 3.5px; */
         }
         .follow > button{
             width: 110%;
@@ -124,4 +115,4 @@
             height: 10px;
             letter-spacing: -.24px;
             margin-top: -15px;
-        }
+        } */

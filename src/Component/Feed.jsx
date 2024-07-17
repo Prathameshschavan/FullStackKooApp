@@ -10,9 +10,12 @@ import { myAction } from "../Redux/Action";
 import Spinner from "react-bootstrap/Spinner";
 import Placeholder from "react-bootstrap/Placeholder";
 import Post from "./Post";
+import { Form } from "react-bootstrap";
+import CreatePostModal from "./CreatePostModal";
 
 const Feed = () => {
   const [showAnotherComponent, setShowAnotherComponent] = useState(false);
+  const [openCreatePostModal, setOpenCreatePostModal] = useState(false);
 
   const handleClick = () => {
     setShowAnotherComponent(true);
@@ -30,10 +33,6 @@ const Feed = () => {
   }, []);
 
   let loginStatus = localStorage.getItem("userToken");
-
-  const openWriter = () => {
-    loginStatus ? myAction(dispatch, true) : alert("Login first to post");
-  };
 
   const [removeIcon, setRemoveIcon] = useState(
     window.matchMedia("(min-width: 1360px)").matches
@@ -54,26 +53,19 @@ const Feed = () => {
         width: "100%",
       }}
     >
-      <div style={{margin:"10px"}}>
-        <input
-          onClick={() => {
-            openWriter();
-          }}
+      <div style={{ margin: "10px" }}>
+        <Form.Control
+          className="pointer"
           readOnly
-          style={{
-            width: "100%",
-            borderRadius: "10px",
-            outline: "none",
-            border: "none",
-            padding:"8px",
-            cursor: "pointer",
-            boxShadow: "rgba(0, 0, 0, 0.10) 0px 0px 0px 1px",
-          }}
           type="text"
           placeholder="What's on your mind?"
+          onClick={() => setOpenCreatePostModal(true)}
         />
       </div>
-
+      <CreatePostModal
+        open={openCreatePostModal}
+        setOpen={setOpenCreatePostModal}
+      />
       <div style={{}}>
         {true ? (
           ["", "", ""].reverse().map((ele, i) => {

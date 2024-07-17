@@ -6,6 +6,8 @@ import LIKE from "../Component/icons/like_icon.png";
 import RED_LIKE from "../Component/icons/gradient_like_icon.png";
 import COMMENT from "../Component/icons/comment_icon.png";
 import MORE from "../Component/icons/more.png";
+import GALLERY from "../Component/icons/photo-gallery.png";
+import CAMERA from "../Component/icons/camera.png";
 
 
 
@@ -17,5 +19,7 @@ export const Assets = {
   LIKE,
   RED_LIKE,
   COMMENT,
-  MORE
+  MORE,
+  GALLERY,
+  CAMERA
 };

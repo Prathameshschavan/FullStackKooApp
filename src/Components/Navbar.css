@@ -27,10 +27,10 @@
 }
 
 .navbar-item-container:hover{
-    background-color: rgba(240, 248, 255, 0.3);
+    background-color: rgb(240 248 255 / 25%);
 }
 .navbar-item-container-selected{
-    background-color: rgba(240, 248, 255, 0.3);
+    background-color: rgb(240 248 255 / 25%);
     color: rgb(255, 255, 255);
     font-size: 20px;
     cursor: pointer;

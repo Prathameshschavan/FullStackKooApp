@@ -1,8 +1,9 @@
-import { Col, Dropdown, Nav, Row } from "react-bootstrap";
+import { Col, Dropdown, Form, Nav, Row } from "react-bootstrap";
 import "./Navbar.css";
 import { useState } from "react";
 import { Assets } from "../Component/Assets";
 import { useNavigate } from "react-router-dom";
+import { IoSearchSharp } from "react-icons/io5";
 
 function Navbar() {
   const [selectedMenu, setSelectedMenu] = useState("/");
@@ -11,7 +12,9 @@ function Navbar() {
     <div className="navbar-containter">
       <Row style={{ width: "100%" }}>
         <Col xs={4}>
-          <div style={{ display: "flex", alignItems: "center", height:"100%" }}>
+          <div
+            style={{ display: "flex", alignItems: "center", height: "100%" }}
+          >
             <h3 className="social_media_text">Aura</h3>
           </div>
         </Col>
@@ -102,6 +105,20 @@ function Navbar() {
               width: "100%",
             }}
           >
+            <div style={{ position: "relative" }}>
+              <Form.Control
+                className="pointer"
+                type="text"
+                placeholder="Search"
+                style={{
+                  borderRadius: "30px",
+                  padding: "4px 4px 4px 30px ",
+                  fontSize: "14px",
+                  border: "none",
+                }}
+              />
+              <IoSearchSharp style={{position:"absolute", top:"7px", left:"8px", color:"gray"}} />
+            </div>
             <Dropdown className="navbar-dropdown">
               <Dropdown.Toggle className="navbar-dropdown">
                 <img

@@ -99,3 +99,8 @@ input[type="password"] {
   box-shadow: none !important;
   border-color: #ccc !important;
 }
+
+#create-post-textarea{
+  box-shadow: none !important;
+  border-color: #ccc !important;
+}

@@ -105,20 +105,7 @@ function Navbar() {
               width: "100%",
             }}
           >
-            <div style={{ position: "relative" }}>
-              <Form.Control
-                className="pointer"
-                type="text"
-                placeholder="Search"
-                style={{
-                  borderRadius: "30px",
-                  padding: "4px 4px 4px 30px ",
-                  fontSize: "14px",
-                  border: "none",
-                }}
-              />
-              <IoSearchSharp style={{position:"absolute", top:"7px", left:"8px", color:"gray"}} />
-            </div>
+           
             <Dropdown className="navbar-dropdown">
               <Dropdown.Toggle className="navbar-dropdown">
                 <img

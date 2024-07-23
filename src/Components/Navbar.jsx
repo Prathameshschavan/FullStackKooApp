@@ -3,7 +3,6 @@ import "./Navbar.css";
 import { useState } from "react";
 import { Assets } from "../Component/Assets";
 import { useNavigate } from "react-router-dom";
-import { IoSearchSharp } from "react-icons/io5";
 
 function Navbar() {
   const [selectedMenu, setSelectedMenu] = useState("/");
@@ -105,8 +104,7 @@ function Navbar() {
               width: "100%",
             }}
           >
-           
-            <Dropdown className="navbar-dropdown">
+            <Dropdown size="sm" className="navbar-dropdown">
               <Dropdown.Toggle className="navbar-dropdown">
                 <img
                   style={{ width: "30px" }}
@@ -116,6 +114,9 @@ function Navbar() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
+                <Dropdown.Item onClick={() => navigate("/profile")}>
+                  Profile
+                </Dropdown.Item>
                 <Dropdown.Item onClick={() => navigate("/login")}>
                   Log Out
                 </Dropdown.Item>

@@ -53,7 +53,7 @@ const CreatePostModal = ({ open, setOpen }) => {
         <p style={{ margin: "0", fontWeight: "600" }}>Create Post</p>
       </Modal.Header>
       <Modal.Body style={{ padding: "0px" }}>
-        <div style={{ display: "flex", gap: "5px", padding: "5px" }}>
+        {/* <div style={{ display: "flex", gap: "5px", padding: "5px" }}>
           <div
             style={{
               fontWeight: "600",
@@ -110,7 +110,7 @@ const CreatePostModal = ({ open, setOpen }) => {
           >
             मराठी
           </div>
-        </div>
+        </div> */}
         <Form>
           <Form.Group>
             <div style={{ position: "relative" }}>

@@ -8,6 +8,8 @@ import COMMENT from "../Component/icons/comment_icon.png";
 import MORE from "../Component/icons/more.png";
 import GALLERY from "../Component/icons/gallery.png";
 import CAMERA from "../Component/icons/camera.png";
+import ACCOUNT from "../Component/icons/account.png";
+import SAMPLE_VIDEO from "../Component/icons/sample_video.mp4";
 
 
 
@@ -21,5 +23,7 @@ export const Assets = {
   COMMENT,
   MORE,
   GALLERY,
-  CAMERA
+  CAMERA,
+  ACCOUNT,
+  SAMPLE_VIDEO
 };

@@ -53,64 +53,6 @@ const CreatePostModal = ({ open, setOpen }) => {
         <p style={{ margin: "0", fontWeight: "600" }}>Create Post</p>
       </Modal.Header>
       <Modal.Body style={{ padding: "0px" }}>
-        {/* <div style={{ display: "flex", gap: "5px", padding: "5px" }}>
-          <div
-            style={{
-              fontWeight: "600",
-              fontSize: "14px",
-            }}
-          >
-            Translate To :
-          </div>
-          <div
-            style={{
-              borderRadius: "10px",
-              padding: "0px 10px",
-              color: "#28004d",
-              cursor: "pointer",
-              border: "1px solid #28004d",
-              width: "80px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "14px",
-            }}
-          >
-            English
-          </div>
-          <div
-            style={{
-              borderRadius: "10px",
-              padding: "0px 10px",
-              color: "#28004d",
-              cursor: "pointer",
-              border: "1px solid #28004d",
-              width: "80px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "14px",
-            }}
-          >
-            हिंदी
-          </div>
-          <div
-            style={{
-              borderRadius: "10px",
-              padding: "0px 10px",
-              color: "#28004d",
-              cursor: "pointer",
-              border: "1px solid #28004d",
-              width: "80px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontSize: "14px",
-            }}
-          >
-            मराठी
-          </div>
-        </div> */}
         <Form>
           <Form.Group>
             <div style={{ position: "relative" }}>
